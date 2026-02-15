@@ -19,7 +19,7 @@ public class TransacaoService {
 
     public void adicionarTransacoes(TransacaoRequestDTO dto){
 
-        log.info("Iniciado o processamento de gravar transações");
+        log.info("Iniciado o processamento de gravar transações " + dto);
 
 
         if (dto.dataHora().isAfter(OffsetDateTime.now())){
@@ -34,25 +34,24 @@ public class TransacaoService {
         }
 
         listaTransacoes.add(dto);
-
+        log.info("Transações foram adicionadas com sucesso");
     }
 
     public void limparTransacoes(){
 
-        log.info("Iniciado o processo para alimpar dados");
+        log.info("Iniciado o processo para limpar transações");
 
         listaTransacoes.clear();
+        log.info("Transações foram limpas com sucesso");
     }
 
     public List<TransacaoRequestDTO> buscarTransacoes(Integer intervaloBusca){
-
+        log.info("Iniciando as buscas de transações pelo tempo " + intervaloBusca);
         OffsetDateTime dataHoraIntervalo = OffsetDateTime.now().minusSeconds(intervaloBusca);
 
+        log.info("Retorno de transações foi feita com sucesso");
         return listaTransacoes.stream()
                 .filter(transacao -> transacao.dataHora()
                 .isAfter(dataHoraIntervalo)).toList();
     }
-
-
-
 }
