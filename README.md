@@ -20,8 +20,7 @@ A API permite registrar transações financeiras e consultar estatísticas calcu
 | Spring Boot | 4.0.2 |
 | Gradle | 9.3.0 |
 | Lombok | — |
-| SpringDoc OpenAPI (Swagger) | 2.8.3 |
-| Spring Actuator | — |
+| Swagger | 2.8.3 |
 
 ---
 
