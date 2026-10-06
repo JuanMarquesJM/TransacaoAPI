@@ -57,8 +57,7 @@ src/
 ### Clonando e rodando
 
 ```bash
-# Clone o repositório
-git clone https://github.com/JuanMarquesJM/transacao-api.git
+git clone https://github.com/JuanMarquesJM/Transacao-api.git
 cd transacao-api
 
 # Execute com o Gradle Wrapper
